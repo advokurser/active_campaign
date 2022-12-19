@@ -89,8 +89,6 @@ module ActiveCampaign
       raise ParsingError, e
     rescue ::Faraday::BadRequestError => e
       raise BadRequestError, e
-    rescue ::Faraday::ConnectionFailed => e
-      raise Unreachable, e
     rescue ::Faraday::UnauthorizedError => e
       raise UnauthorizedError, e
     rescue ::Faraday::ForbiddenError => e
